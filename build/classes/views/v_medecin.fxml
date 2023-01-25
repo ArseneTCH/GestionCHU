@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="833.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MedecinController">
+   <children>
+      <BorderPane layoutX="197.0" layoutY="156.0" prefHeight="773.0" prefWidth="866.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="140.0" prefWidth="909.0" style="-fx-background-color: #BEB69F;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="114.0" fitWidth="109.0" layoutX="788.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/image2.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="60.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centre Hospitalier Universitaire 221">
+                     <font>
+                        <Font name="System Bold" size="39.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="anchoreContent" prefHeight="527.0" prefWidth="754.0" />
+         </center>
+         <left>
+            <AnchorPane prefHeight="693.0" prefWidth="178.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="141.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/jimmy-fallon.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="txtName" layoutX="52.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="50.0" layoutY="453.0" onMouseClicked="#handleLogOut" strokeType="OUTSIDE" strokeWidth="0.0" text="Deconnexion">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIcon glyphName="SIGN_OUT" layoutX="25.0" layoutY="456.0" size="1.3em" />
+                  <Text layoutX="36.0" layoutY="276.0" onMouseClicked="#handleBackToList" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste Rendez-Vous " wrappingWidth="134.3818359375">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIcon glyphName="LIST" layoutX="12.0" layoutY="277.0" />
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

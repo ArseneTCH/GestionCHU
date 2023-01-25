@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="906.0" prefWidth="936.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.PatientController">
+    <stylesheets>
+        <URL value="@/views/css/home.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="476.0" layoutY="300.0" prefHeight="841.0" prefWidth="893.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="140.0" prefWidth="929.0" style="-fx-background-color: #BEB69F;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="62.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centre Hospitalier Universitaire  221">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="37.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="115.0" fitWidth="111.0" layoutX="802.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/image2.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <BorderPane>
+               <center>
+                  <AnchorPane prefHeight="758.0" prefWidth="968.0">
+                     <children>
+                        <AnchorPane fx:id="anchorContent" layoutX="3.0" layoutY="92.0" prefHeight="439.0" prefWidth="724.0">
+                           <children>
+                              <TableView fx:id="tblvList" layoutX="9.0" layoutY="4.0" prefHeight="431.0" prefWidth="716.0">
+                                 <columns>
+                                    <TableColumn fx:id="tblcMotif" prefWidth="194.0" text="Motif" />
+                                    <TableColumn fx:id="tblcDate" prefWidth="188.0" text="Date" />
+                                    <TableColumn fx:id="tblcMedecin" prefWidth="177.0" text="Medecin" />
+                                    <TableColumn fx:id="tblcStatut" prefWidth="137.0" text="Statut" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="15.0" layoutY="547.0" prefHeight="202.0" prefWidth="706.0" style="-fx-background-color: #D3D4DF;">
+                           <children>
+                              <Text layoutX="75.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motif du Rendez-Vous">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="199.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prendre un Rendez-Vous">
+                                 <font>
+                                    <Font name="Bookman Old Style Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="427.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type de Medecin">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Text>
+                              <JFXComboBox fx:id="cboMedecin" layoutX="427.0" layoutY="94.0" prefHeight="31.0" prefWidth="178.0" />
+                              <JFXComboBox fx:id="cboMotif" layoutX="75.0" layoutY="95.0" prefHeight="31.0" prefWidth="178.0" />
+                              <Button layoutX="442.0" layoutY="149.0" mnemonicParsing="false" onAction="#HandleSubmitRv" prefHeight="39.0" prefWidth="166.0" style="-fx-background-color: #141EFE; -fx-border-color: #FF0000; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Soumettre" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <JFXComboBox fx:id="cboFilter" layoutX="479.0" layoutY="34.0" onAction="#HandleFilterRendezVous" prefHeight="31.0" prefWidth="181.0" promptText="Filtrer" />
+                        <FontAwesomeIcon fill="RED" glyphName="FILTER" layoutX="671.0" layoutY="62.0" size="1.6em" />
+                     </children>
+                  </AnchorPane>
+               </center>
+               <left>
+                  <AnchorPane prefHeight="766.0" prefWidth="200.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="138.0" fitWidth="135.0" layoutX="31.0" layoutY="20.0" onMouseClicked="#HandleSettings" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/jimmy-fallon.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="txtName" layoutX="70.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <TextFlow layoutX="16.0" layoutY="294.0" onMouseClicked="#HandleListeRendezVous">
+                           <children>
+                              <FontAwesomeIcon glyphName="LIST" size="1.3em" text="" />
+                              <Text fx:id="txtName1" strokeType="OUTSIDE" strokeWidth="0.0" text=" Mes RendezVous ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </TextFlow>
+                        <TextFlow layoutX="14.0" layoutY="506.0" onMouseClicked="#HandleLogOut" prefHeight="32.0" prefWidth="172.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="SIGN_OUT" size="1.4em" />
+                              <Text fx:id="txtName12" strokeType="OUTSIDE" strokeWidth="0.0" text=" Deconnexion">
+                                 <font>
+                                    <Font name="System Bold Italic" size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </AnchorPane>
+               </left>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ValideRendezVousController">
+   <children>
+      <BorderPane layoutX="125.0" layoutY="153.0" prefHeight="750.0" prefWidth="1044.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="643.0" prefWidth="634.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTextField fx:id="txtfCode" layoutX="22.0" layoutY="85.0" prefHeight="31.0" prefWidth="182.0" unFocusColor="RED" />
+                  <JFXTextField fx:id="txtfNomComplet" layoutX="31.0" layoutY="171.0" prefHeight="31.0" prefWidth="183.0" unFocusColor="RED" />
+                  <JFXTextField fx:id="txtfMotif" layoutX="30.0" layoutY="251.0" prefHeight="31.0" prefWidth="191.0" unFocusColor="RED" />
+                  <JFXDatePicker fx:id="txtfDate" defaultColor="RED" layoutX="289.0" layoutY="171.0" prefHeight="31.0" prefWidth="204.0" />
+                  <Text layoutX="290.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fonction" />
+                  <Text layoutX="284.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un Medecin">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="30.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informations du Patient">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="30.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code" />
+                  <Text layoutX="31.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Complet" />
+                  <Text layoutX="30.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motif" />
+                  <JFXTextField fx:id="txtfFonction" layoutX="290.0" layoutY="85.0" prefHeight="31.0" prefWidth="195.0" unFocusColor="RED" />
+                  <Text layoutX="290.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+                  <JFXComboBox fx:id="cboMedecin" layoutX="288.0" layoutY="251.0" prefHeight="31.0" prefWidth="199.0" unFocusColor="RED" />
+                  <JFXButton layoutX="368.0" layoutY="421.0" onAction="#handleValiderRv" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: blue;" text="Valider" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <JFXButton layoutX="197.0" layoutY="420.0" onAction="#handleAnnulerRv" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: red;" text="Annuler" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <JFXTextArea fx:id="txtfAntecedent" layoutX="30.0" layoutY="321.0" prefHeight="70.0" prefWidth="233.0" unFocusColor="RED" />
+                  <Text layoutX="31.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antecedent" />
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="64.0" prefWidth="1044.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="91.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planifier un Rendez-Vous">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="25.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="7.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0">
+                     <image>
+                        <Image url="@img/image2.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="431.2142791748047" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="6.71429443359375">
+                     <image>
+                        <Image url="@img/image2.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="999.0" styleClass="mainFxmlClass" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LoginController">
+   <children>
+      <AnchorPane layoutX="499.0" prefHeight="605.0" prefWidth="500.0" style="-fx-background-color: #BEB69F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="499.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="94.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="45.0" prefWidth="162.0" style="-fx-background-color: #ee1e07;" text="Annuler" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Button>
+            <FontAwesomeIcon fill="#ee1e07" glyphName="USER" layoutX="42.0" layoutY="170.0" size="1.9em" wrappingWidth="27.0" />
+            <TextField fx:id="txtflogin" layoutX="93.0" layoutY="138.0" prefHeight="44.0" prefWidth="359.0" promptText="login" />
+            <FontAwesomeIcon fill="RED" glyphName="KEY" layoutX="42.0" layoutY="290.0" size="1.9em" wrappingWidth="27.0" />
+            <Button layoutX="289.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="45.0" prefWidth="162.0" style="-fx-background-color: #255D9C;" text="Se Connecter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Button>
+            <Text fx:id="txtError" fill="RED" layoutX="111.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login ou Password Incorrect">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="266.0" layoutY="455.0" onMouseClicked="#HandleRegister" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" wrappingWidth="27.00000076368451">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Button layoutX="97.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleNewCompte" prefHeight="45.0" prefWidth="359.0" style="-fx-background-color: #228B22;" text="Create A New Account" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="txtfpasse" layoutX="93.0" layoutY="257.0" prefHeight="44.0" prefWidth="359.0" promptText="password" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="605.0" fitWidth="500.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/image2.jpg" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
